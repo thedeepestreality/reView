@@ -21,7 +21,8 @@ void MrServer::readyRead() {
     qDebug()<<"Yo! ";
     QTcpSocket *client = (QTcpSocket*) sender();
     QString s(client->readAll());
-    qDebug()<<s;
+    double n=s.toDouble();
+    qDebug()<<n;
     /*
     while (client->canReadLine()) {
               //here i needed a string..
